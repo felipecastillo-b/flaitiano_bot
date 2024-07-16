@@ -55,7 +55,7 @@ async def play(ctx, *, filename: str):
         pass
 
     # Asegurate de que el archivo existe en la carpeta del bot
-    audio_path = f'./{filename}.mp3'
+    audio_path = f'./music/{filename}.mp3'
 
     try:
         voice_client.play(discord.FFmpegPCMAudio(audio_path), after=lambda e: print(f'Error: {e}') if e else None)
